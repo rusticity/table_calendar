@@ -134,12 +134,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         outsideDaysVisible: false,
       ),
       headerStyle: HeaderStyle(
-        formatButtonTextStyle: TextStyle().copyWith(color: Colors.white, fontSize: 15.0),
-        formatButtonDecoration: BoxDecoration(
-          color: Colors.deepOrange[400],
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-      ),
+          formatButtonTextStyle: TextStyle().copyWith(color: Colors.white, fontSize: 15.0),
+          formatButtonDecoration: BoxDecoration(
+            color: Colors.deepOrange[400],
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          headerBackgroundColor: Colors.red),
       onDaySelected: _onDaySelected,
       onVisibleDaysChanged: _onVisibleDaysChanged,
     );
@@ -241,9 +241,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       duration: const Duration(milliseconds: 300),
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
-        color: _calendarController.isSelected(date)
-            ? Colors.brown[500]
-            : _calendarController.isToday(date) ? Colors.brown[300] : Colors.blue[400],
+        color: _calendarController.isSelected(date) ? Colors.brown[500] : _calendarController.isToday(date) ? Colors.brown[300] : Colors.blue[400],
       ),
       width: 16.0,
       height: 16.0,
