@@ -277,7 +277,9 @@ class _TableCalendarState extends State<TableCalendar> with SingleTickerProvider
     if (widget.headerVisible) {
       children.addAll([
         const SizedBox(height: 6.0),
-        _buildHeader(),
+        Container(
+          color:Colors.blue,
+          child:_buildHeader()),
       ]);
     }
 
